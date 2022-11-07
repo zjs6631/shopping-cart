@@ -1,1 +1,31 @@
+.App{
+  
+}
 
+.headerContainer{
+  
+  height: 100%;
+  background-color: #73926C;
+  text-align: center;
+}
+
+.header{
+  margin: 0;
+}
+
+.NavBar{
+  
+  background-color: #73926C;
+  
+}
+.NavList{
+  margin: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.homeNav{
+  justify-self: end;
+  padding-right: 5%;
+}

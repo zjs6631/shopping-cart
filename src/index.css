@@ -1,1 +1,14 @@
+html, body{
+  margin: 0;
+  padding: 0;
+  height: auto;
+  width: 100%;
+}
 
+
+#root{
+  margin: 0;
+  padding: 0;
+  height: auto;
+  width: 100%;
+}
