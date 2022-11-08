@@ -1,11 +1,15 @@
 .App{
-  
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .headerContainer{
   
-  height: 100%;
-  background-color: #73926C;
+  height: auto;
+  background-color: #23272A;
+  color: white;
   text-align: center;
 }
 
@@ -15,7 +19,8 @@
 
 .NavBar{
   
-  background-color: #73926C;
+  background-color: #23272A;
+  color: white;
   
 }
 .NavList{
@@ -28,4 +33,52 @@
 .homeNav{
   justify-self: end;
   padding-right: 5%;
+}
+
+.Footer{
+  position: fixed;
+  bottom: 0; 
+  width: 100%;
+  height: 60px;
+  background-color: #23272A;
+  color: white;
+}
+
+.homePage{
+  background-image: url("./images/mountainrange.svg");
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
+  
+  
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.homeDescription{
+  text-align: center;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.shopNow{
+  display: grid;
+  grid-row-start: 2;
+}
+
+#shopBtn{
+  justify-self: center;
+  height: 20px;
+  background-color: #23272A;
+  color: white;
+  border-style: none;
+}
+
+#shopBtn:hover{
+  background-color: #393c41;
 }
