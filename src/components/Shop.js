@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {Link} from "react-router-dom";
 import axeImg from "../images/axe.jpeg";
 import bearsprayImg from "../images/bearspray.jpg";
@@ -44,11 +44,13 @@ const Shop = () =>{
         console.log(cart);
     }
 
+    
+
 
 
     return(
         <div className="shopPage">
-            <div>            
+            <div className="homeBtnContainer">            
                 <Link to="/"><button id="homeBtn">Home</button></Link>
                 <h1>{cart.length}</h1>
             </div>

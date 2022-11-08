@@ -135,6 +135,10 @@
   background-color: #393c41;
 }
 
+.homeBtnContainer{
+  display: flex;
+  height: 20px;
+}
 .inventoryContainer{
   padding-top: 15px;
   display: flex;
@@ -143,7 +147,7 @@
 }
 
 .itemCard{
-  height: 300px;
+  height: 250px;
   width: 200px;
   background-color: #D2CCB1;
 }
