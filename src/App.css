@@ -128,9 +128,43 @@
   background-color: #23272A;
   color: white;
   border-style: none;
-  
+  z-index: 3;
 }
 
 #homeBtn:hover{
   background-color: #393c41;
+}
+
+.inventoryContainer{
+  padding-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.itemCard{
+  height: 300px;
+  width: 200px;
+  background-color: #D2CCB1;
+}
+
+.itemCard img{
+  height: auto;
+  width: 50%;
+
+}
+
+.itemDecrement{
+  width: 25px;
+  height: 25px;
+}
+
+.itemInput{
+  width: 25px;
+  height: 25px;
+}
+
+.itemIncrement{
+  width: 25px;
+  height: 25px;
 }
