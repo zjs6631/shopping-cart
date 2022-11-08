@@ -6,11 +6,22 @@
 }
 
 .headerContainer{
-  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
   height: auto;
   background-color: #23272A;
   color: white;
-  text-align: center;
+  height: 60px;
+  
+}
+
+.headerContainer h1{
+  justify-self: end;
+}
+
+.headerContainer img{
+  justify-self: end;
 }
 
 .header{
@@ -28,11 +39,23 @@
   list-style: none;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  
 }
 
 .homeNav{
   justify-self: end;
   padding-right: 5%;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.homeNav:focus{
+  outline: none !important;
 }
 
 .Footer{
@@ -80,5 +103,34 @@
 }
 
 #shopBtn:hover{
+  background-color: #393c41;
+}
+
+.shopPage{
+  background-image: url("./images/mountainrange.svg");
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+}
+
+.shopPage h1{
+  margin: 0;
+}
+
+#homeBtn{
+  justify-self: center;
+  height: 20px;
+  background-color: #23272A;
+  color: white;
+  border-style: none;
+  
+}
+
+#homeBtn:hover{
   background-color: #393c41;
 }
