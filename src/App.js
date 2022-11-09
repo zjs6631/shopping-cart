@@ -1,10 +1,11 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, PureComponent} from 'react';
 import Header from './components/Header';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import { Home } from './components/Home';
 import Shop from './components/Shop';
 import './App.css';
+import './styles/Checkout.css'
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import axeImg from "./images/axe.jpeg";
 import bearsprayImg from "./images/bearspray.jpg";
@@ -14,6 +15,7 @@ import firestarterImg from "./images/firestarter.jpg";
 import lanternImg from "./images/lantern.jpeg";
 import tentImg from "./images/tent.jpg";
 import uniqid from "uniqid";
+import Checkout from './components/Checkout';
 
 function App() {
 
@@ -38,31 +40,85 @@ function App() {
   firestarter, lantern, tent]);
 
 
+  //set a total to track the total cost of users purchase
+  const [puchaseTotal, setPurchaseTotal] = useState(0);
+  const [numItems, setNumItems] = useState(0);
+
+
   const handleClick = (e) =>{
       let copyCart = cart;
+      let copyTotal = puchaseTotal;
+      let copyNumItems = numItems;
       inventory.map((item)=>{
-          if(item.key == e.currentTarget.id){
+          if(item.key == e.currentTarget.id && cart.indexOf(item) == -1){
               item.numInCart+=1;
               copyCart.push(item);
-              
+              copyTotal+=item.price;
+              copyNumItems+=1;
+          } else if (item.key == e.currentTarget.id && cart.indexOf(item) != -1){
+            item.numInCart+=1;
+            copyTotal+=item.price;
+            copyNumItems+=1;
           }
       });
       setCart(copyCart);
-      console.log(cart);
+      setPurchaseTotal(copyTotal);
+      setNumItems(copyNumItems);
+      
+  }
+
+  const handleIncrement = (e) =>{
+    let copyCart = cart;
+    let copyTotal = puchaseTotal; //change this spelling later 
+    let copyNumItems = numItems;
+    let key = e.currentTarget.id;
+    key = key.substring(0, key.length-1);
+    
+    cart.map((item)=>{
+      if(item.key == key){
+        item.numInCart+=1;
+        copyTotal+=item.price;
+        copyNumItems+=1;
+      }
+    })
+    setCart(copyCart);
+    setPurchaseTotal(copyTotal);
+    setNumItems(copyNumItems);
+    
+  }
+
+  const handleDecrement = (e) =>{
+    let copyCart = cart;
+    let copyTotal = puchaseTotal; //change this spelling later 
+    let copyNumItems = numItems;
+    let key = e.currentTarget.id;
+    key = key.substring(0, key.length-1);
+    cart.map((item)=>{
+      if(item.key == key && item.numInCart > 0){
+        item.numInCart-=1;
+        copyTotal-=item.price;
+        copyNumItems-=1;
+      }
+    })
+    setCart(copyCart);
+    setPurchaseTotal(copyTotal);
+    setNumItems(copyNumItems);
+    
   }
 
   useEffect(()=>{
-    
+
   },[cart])
 
   return (
     <div className='App'>
 
-      <Header />
+      <Header numItems={numItems}/>
       
       <Routes>
         <Route index element = {<Home />}/>
         <Route path="/shop" element={<Shop handleClick={handleClick} cart={cart} inventory={inventory}/>}/>
+          <Route path='checkout' element={<Checkout cart={cart} total={puchaseTotal} handleDecrement={handleDecrement} handleIncrement={handleIncrement}/>}/>
       </Routes>
       
       <Footer />

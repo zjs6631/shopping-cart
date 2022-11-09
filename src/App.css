@@ -17,12 +17,39 @@
 }
 
 .headerContainer h1{
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
   justify-self: end;
 }
 
-.headerContainer img{
+.headerContainer a{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
   justify-self: end;
 }
+
+.headerContainer div{
+  display: grid;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  justify-self: end;
+  z-index: 3;
+  background-color: red;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 14px;
+  
+  
+}
+
 
 .header{
   margin: 0;

@@ -1,0 +1,16 @@
+.currentCart{
+    display: flex;
+}
+
+.cartCard{
+    width: 200px;
+    height: 200px;
+}
+
+.cartItemBtns{
+    display: flex;
+}
+
+.cartItemBtns button{
+    height: fit-content;
+}
