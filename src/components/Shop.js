@@ -9,7 +9,10 @@ import lanternImg from "../images/lantern.jpeg";
 import tentImg from "../images/tent.jpg";
 import uniqid from "uniqid";
 
+
 const Shop = () =>{
+
+    
     
     const [cart, setCart] = useState([]); //create cart to hold items to buy
 
@@ -38,12 +41,14 @@ const Shop = () =>{
             if(item.key == e.currentTarget.id){
                 item.numInCart+=1;
                 copyCart.push(item);
+                
             }
         });
         setCart(copyCart);
         console.log(cart);
     }
 
+    
     
 
 
