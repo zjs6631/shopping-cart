@@ -7,7 +7,7 @@ const Checkout = (props) => {
 
     return (
         <div className="checkoutContainer">
-            <h1>Checkout</h1>
+            <h1>Your Cart</h1>
             <div className="currentCart">
                 {props.cart.map((item) => {
                     if(item.numInCart > 0){
@@ -25,10 +25,12 @@ const Checkout = (props) => {
                     }
                 })}
             </div>
-            <h1>{'$' + (props.total).toFixed(2)}</h1>
-                <Link to='/'><button>Home</button></Link>
+            <h1>{'Total price: $' + (props.total).toFixed(2)}</h1>
+            <div className="checkoutBtns">
+                <Link to='/'><button id="checkHome">Home</button></Link>
                 <Link to='/shop'><button>Continue Shopping</button></Link>
-                <button>Pay</button>
+                <button id="payBtn">Pay</button>
+            </div>
         </div>
     )
 }

@@ -1,4 +1,7 @@
 .App{
+  display: flex;
+  flex-direction: column;
+  min-height: fit-content;
   height: 100%;
   width: 100%;
   margin: 0;
@@ -13,6 +16,7 @@
   background-color: #23272A;
   color: white;
   height: 60px;
+  padding: 10px;
   
 }
 
@@ -30,6 +34,14 @@
   grid-row-start: 1;
   grid-row-end: 2;
   justify-self: end;
+  margin-top: 10px;
+  margin-right: 10px;
+  
+}
+
+.headerContainer img{
+  height: 30px;
+  width: 30px;
 }
 
 .headerContainer div{
@@ -41,12 +53,14 @@
   justify-self: end;
   z-index: 3;
   background-color: red;
+  opacity: 80%;
   height: 14px;
   width: 14px;
   border-radius: 50%;
   text-align: center;
   line-height: 14px;
-  
+  margin-top: 5px;
+  margin-right: 10px;
   
 }
 
@@ -86,7 +100,7 @@
 }
 
 .Footer{
-  position: fixed;
+  position: relative;
   bottom: 0; 
   width: 100%;
   height: 60px;
@@ -121,8 +135,12 @@
   grid-row-start: 2;
 }
 
+.shopNow{
+  display: grid;
+  justify-content: center;
+}
 #shopBtn{
-  justify-self: center;
+  
   height: 20px;
   background-color: #23272A;
   color: white;
@@ -134,9 +152,11 @@
 }
 
 .shopPage{
+  
   background-image: url("./images/mountainrange.svg");
   margin: 0;
   padding: 0;
+  padding-bottom: 10px;
   height: 100%;
   width: 100%;
   background-repeat: no-repeat;
@@ -150,7 +170,7 @@
 }
 
 #homeBtn{
-  justify-self: center;
+  
   height: 20px;
   background-color: #23272A;
   color: white;
@@ -163,26 +183,57 @@
 }
 
 .homeBtnContainer{
-  display: flex;
+  display: grid;
+  justify-content: center;
   height: 20px;
+  padding-top: 10px;
+  
 }
 .inventoryContainer{
+  padding-left: 20px;
   padding-top: 15px;
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
+  height: fit-content;
 }
 
 .itemCard{
-  height: 250px;
-  width: 200px;
+  display: grid;
+  min-height: 175px;
+  height: auto;
+  max-height: 250px;
+  width: auto;
+  max-width: 150px;
   background-color: #D2CCB1;
+  color: black;
+  justify-items: center;
+  padding-bottom: 10px;
+}
+
+.itemCard h1{
+  font-size: 18px;
+}
+
+.itemCard h3{
+  font-size: 14px;
 }
 
 .itemCard img{
   height: auto;
   width: 50%;
 
+}
+
+.itemCard button{
+  width: fit-content;
+  border-style: none;
+  background-color: #23272A;
+  color: white;
+}
+
+.itemCard button:hover{
+  background-color: #393c41;
 }
 
 .itemDecrement{
@@ -199,3 +250,4 @@
   width: 25px;
   height: 25px;
 }
+

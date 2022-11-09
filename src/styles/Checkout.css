@@ -1,16 +1,68 @@
+.checkoutContainer{
+    background-image: url("../images/mountainrange.svg");
+    margin: 0;
+    padding: 0;
+    padding-bottom: 10px;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    text-align: center;
+  }
+
+.checkoutContainer button{
+    width: fit-content;
+    height: fit-content;
+    background-color: #23272A;
+    color: white;
+}
+
+.checkoutContainer button:hover{
+    background-color: #393c41;
+}
+
+.checkoutBtns{
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 200px;
+}
+
+#payBtn{
+    justify-self: center;
+}
+
 .currentCart{
+    padding-left: 20px;
     display: flex;
+    gap: 10px;
 }
 
 .cartCard{
-    width: 200px;
+    display: grid;
+    width: 150px;
     height: 200px;
+    background-color: #D2CCB1;
+    justify-content: center;
+    text-align: center;
 }
 
 .cartItemBtns{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+    
 }
 
 .cartItemBtns button{
     height: fit-content;
+    align-self: center;
+    background-color: #23272A;
+    color: white;
+}
+
+.cartItemBtns button:hover{
+    background-color: #393c41;
 }
