@@ -1,12 +1,10 @@
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import App from "./App";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
 import { Home } from "./components/Home";
-import NavBar from "./components/NavBar";
 import Shop from "./components/Shop";
-import render from "react-dom";
 import Checkout from "./components/Checkout";
+//RouteSwitch handles all of our routes
+//"/*" is needed to be able to transition between the pages from the home page
 
 const RouteSwitch = () =>{
 

@@ -1,8 +1,8 @@
-import React, {useState} from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import cart from "../images/cart.png";
+import cart from "../images/cart.png"; 
 
-const Header = (props) =>{
+const Header = (props) =>{ //header component that uses cart prop to display item count
     return(
     <div className="headerContainer">
         <h1 className="header">The Outpost</h1>

@@ -2,7 +2,7 @@ import React from "react";
 import {Link} from "react-router-dom";
 
 
-export const Home = () =>{
+export const Home = () =>{ //home component that has a button linked to shop page via react router
 
     return(
         <div className="homePage">

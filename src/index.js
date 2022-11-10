@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 import RouteSwitch from './RouteSwitch.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+//had to change to <RouteSwitch/> instead of default <App/> to use react-router properly
 root.render(
   <React.StrictMode>
     <RouteSwitch />

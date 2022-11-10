@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import {Link} from "react-router-dom";
 
 
 
-const Shop = (props) =>{
+const Shop = (props) =>{ //shop comp that uses props to display the inventory as well as handleclick function tied to button
 
 
     return(

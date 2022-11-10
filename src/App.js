@@ -1,12 +1,11 @@
-import React, {useState, useEffect, PureComponent} from 'react';
+import React, {useState, useEffect} from 'react';
 import Header from './components/Header';
-import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import { Home } from './components/Home';
 import Shop from './components/Shop';
 import './App.css';
 import './styles/Checkout.css'
-import {BrowserRouter, Routes, Route} from "react-router-dom";
+import {Routes, Route} from "react-router-dom";
 import axeImg from "./images/axe.jpeg";
 import bearsprayImg from "./images/bearspray.jpg";
 import bugsprayImg from "./images/bugspray.jpg";
@@ -17,7 +16,7 @@ import tentImg from "./images/tent.jpg";
 import uniqid from "uniqid";
 import Checkout from './components/Checkout';
 
-function App() {
+function App() { //app component contains most the logic of this app
 
   const [cart, setCart] = useState([]); //create cart to hold items to buy
 
@@ -44,34 +43,40 @@ function App() {
   const [puchaseTotal, setPurchaseTotal] = useState(0);
   const [numItems, setNumItems] = useState(0);
 
-
+  //handleClick maintains state of app when add to cart is clicked on the shop page
   const handleClick = (e) =>{
+      //create a copy current state of the cart/price total/item total
       let copyCart = cart;
       let copyTotal = puchaseTotal;
       let copyNumItems = numItems;
+      //map over the inventory and search for matching items in cart
       inventory.map((item)=>{
-          if(item.key == e.currentTarget.id && cart.indexOf(item) == -1){
+          if(item.key == e.currentTarget.id && cart.indexOf(item) == -1){ //if we do not find a match then push item into cart and adjust price/item count
               item.numInCart+=1;
               copyCart.push(item);
               copyTotal+=item.price;
               copyNumItems+=1;
-          } else if (item.key == e.currentTarget.id && cart.indexOf(item) != -1){
+          } else if (item.key == e.currentTarget.id && cart.indexOf(item) != -1){ //if we do find a match then just adjust item count and price
             item.numInCart+=1;
             copyTotal+=item.price;
             copyNumItems+=1;
           }
       });
+      //set all of our states
       setCart(copyCart);
       setPurchaseTotal(copyTotal);
       setNumItems(copyNumItems);
       
   }
 
+  //handleIncrement handles states when a + button is pressed on the checkout page
   const handleIncrement = (e) =>{
     let copyCart = cart;
     let copyTotal = puchaseTotal; //change this spelling later 
     let copyNumItems = numItems;
+    //could not use the item.key as the id for both + and - button so had to add a "i" and "d" to each to make it unique
     let key = e.currentTarget.id;
+    //then removed the extra character to compare it to item.key
     key = key.substring(0, key.length-1);
     
     cart.map((item)=>{
@@ -86,7 +91,7 @@ function App() {
     setNumItems(copyNumItems);
     
   }
-
+  //same function as Increment except decrementing values of state
   const handleDecrement = (e) =>{
     let copyCart = cart;
     let copyTotal = puchaseTotal; //change this spelling later 
@@ -106,9 +111,7 @@ function App() {
     
   }
 
-  useEffect(()=>{
-
-  },[cart])
+  //solid example of setting up Routes and passing props
 
   return (
     <div className='App'>
