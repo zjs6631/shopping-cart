@@ -25,7 +25,8 @@
   grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: 2;
-  justify-self: end;
+  padding-left: 20px;
+  align-self: center;
 }
 
 .headerContainer a{
@@ -100,12 +101,29 @@
 }
 
 .Footer{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   position: relative;
   bottom: 0; 
   width: 100%;
   height: 60px;
   background-color: #23272A;
   color: white;
+}
+
+.Footer p{
+  padding-left: 20px;
+}
+
+.Footer a{
+  justify-self: end;
+}
+
+.github{
+  width: fit-content;
+  height: fit-content;
+  background-color: #393c41;
+  
 }
 
 .homePage{
@@ -128,6 +146,7 @@
   text-align: center;
   grid-row-start: 1;
   grid-row-end: 2;
+  font-size: 18px;
 }
 
 .shopNow{
@@ -141,7 +160,9 @@
 }
 #shopBtn{
   
-  height: 20px;
+  width: 80px;
+  height: 60px;
+  font-size: 24px;
   background-color: #23272A;
   color: white;
   border-style: none;
@@ -163,6 +184,8 @@
   background-size: cover;
   background-position: center;
   display: grid;
+  grid-template-rows: 1fr 10fr;
+  gap: 20px;
 }
 
 .shopPage h1{
@@ -171,7 +194,9 @@
 
 #homeBtn{
   
-  height: 20px;
+  width: 80px;
+  height: 40px;
+  font-size: 24px;
   background-color: #23272A;
   color: white;
   border-style: none;
@@ -185,17 +210,23 @@
 .homeBtnContainer{
   display: grid;
   justify-content: center;
-  height: 20px;
+  align-content: center;
+  height: 100%;
   padding-top: 10px;
+  
   
 }
 .inventoryContainer{
+  justify-self: center;
+  overflow-y: auto;
   padding-left: 20px;
   padding-top: 15px;
+  padding-bottom: 15px;
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
-  height: fit-content;
+  height: 100%;
+  width: 40%;
 }
 
 .itemCard{
@@ -208,11 +239,13 @@
   background-color: #D2CCB1;
   color: black;
   justify-items: center;
+  
   padding-bottom: 10px;
 }
 
 .itemCard h1{
   font-size: 18px;
+  align-self: center;
 }
 
 .itemCard h3{

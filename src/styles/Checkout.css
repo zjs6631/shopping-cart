@@ -36,8 +36,16 @@
 
 .currentCart{
     padding-left: 20px;
+    overflow-y: auto;
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
+    width: 50%;
+    height: 100%;
+    align-self: center;
+    justify-self: center;
+    scroll-behavior: smooth;
+    
 }
 
 .cartCard{
@@ -53,14 +61,17 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 5px;
-    
+    font-size: 20px;
 }
 
 .cartItemBtns button{
-    height: fit-content;
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
     align-self: center;
     background-color: #23272A;
     color: white;
+    border-style: none;
 }
 
 .cartItemBtns button:hover{
