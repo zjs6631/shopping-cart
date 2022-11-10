@@ -28,8 +28,8 @@ const Checkout = (props) => { //takes in props that represent the current cart a
             </div>
             <h1>{'Total price: $' + (props.total).toFixed(2)}</h1>
             <div className="checkoutBtns">
-                <Link to='/'><button id="checkHome">Home</button></Link>
-                <Link to='/shop'><button>Continue Shopping</button></Link>
+                <Link to='/shopping-cart/'><button id="checkHome">Home</button></Link>
+                <Link to='/shopping-cart/shop'><button>Continue Shopping</button></Link>
                 <button id="payBtn">Pay</button>
             </div>
         </div>

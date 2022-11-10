@@ -11,7 +11,7 @@ const RouteSwitch = () =>{
     return(
     <BrowserRouter>
         <Routes>
-            <Route path="/*" element={<App />}>
+            <Route path="/shopping-cart/*" element={<App />}>
                 <Route index element = {<Home />} />
                 <Route path="shop" element = {<Shop/>}/>
                     <Route path="checkout" element = { <Checkout/>}/>

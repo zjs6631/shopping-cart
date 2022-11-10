@@ -9,7 +9,7 @@ const Shop = (props) =>{ //shop comp that uses props to display the inventory as
     return(
         <div className="shopPage">
             <div className="homeBtnContainer">            
-                <Link to="/"><button id="homeBtn">Home</button></Link>
+                <Link to="/shopping-cart/"><button id="homeBtn">Home</button></Link>
             </div>
             <div className="inventoryContainer">
             {props.inventory.map((item)=>{

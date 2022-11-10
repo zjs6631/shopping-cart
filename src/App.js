@@ -111,7 +111,7 @@ function App() { //app component contains most the logic of this app
     
   }
 
-  //solid example of setting up Routes and passing props
+  //solid example of setting up Routes and passing
 
   return (
     <div className='App'>
