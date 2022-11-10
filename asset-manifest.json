@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/shopping-cart/static/css/main.7e930e32.css",
+    "main.js": "/shopping-cart/static/js/main.8525d2af.js",
+    "static/js/787.d6fe38e8.chunk.js": "/shopping-cart/static/js/787.d6fe38e8.chunk.js",
+    "static/media/axe.jpeg": "/shopping-cart/static/media/axe.424284e9238fc97f517d.jpeg",
+    "static/media/bearspray.jpg": "/shopping-cart/static/media/bearspray.4326806f62251a24d112.jpg",
+    "static/media/firestarter.jpg": "/shopping-cart/static/media/firestarter.90471af3c409f9a4e80c.jpg",
+    "static/media/tent.jpg": "/shopping-cart/static/media/tent.7977858409d27c8eae99.jpg",
+    "static/media/cord.jpg": "/shopping-cart/static/media/cord.267e9fea63296087c910.jpg",
+    "static/media/lantern.jpeg": "/shopping-cart/static/media/lantern.e84c047eea6bcea6afe0.jpeg",
+    "static/media/bugspray.jpg": "/shopping-cart/static/media/bugspray.4c622b1226607bce0ea4.jpg",
+    "static/media/mountainrange.svg": "/shopping-cart/static/media/mountainrange.1896128d1b80c04d777e.svg",
+    "index.html": "/shopping-cart/index.html",
+    "main.7e930e32.css.map": "/shopping-cart/static/css/main.7e930e32.css.map",
+    "main.8525d2af.js.map": "/shopping-cart/static/js/main.8525d2af.js.map",
+    "787.d6fe38e8.chunk.js.map": "/shopping-cart/static/js/787.d6fe38e8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7e930e32.css",
+    "static/js/main.8525d2af.js"
+  ]
+}
